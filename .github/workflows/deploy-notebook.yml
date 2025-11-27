@@ -18,7 +18,7 @@ jobs:
         ORIGIN_HOST=${{ secrets.DATABRICKS_ORIGIN_HOST }}
         ORIGIN_TOKEN=${{ secrets.DATABRICKS_ORIGIN_TOKEN }}
         NOTEBOOK_BASE="/Workspace/Users/smartdata_gr7@outlook.com/ETL"
-        NOTEBOOKS=("Ingest circuits data" "Ingest racing data" "Preparacion_Ambiente" "Load" "Transform")  # Agrega más según necesitesas
+        NOTEBOOKS=("Ingest_circuits_data" "Ingest_racing_data" "Preparacion_Ambiente" "Load" "Transform")  # Agrega más según necesitesas
         mkdir -p notebooks_to_deploy
         for nb in "${NOTEBOOKS[@]}"; do
           echo "Exportando $nb en modo raw..."
@@ -144,7 +144,7 @@ jobs:
               "task_key": "Ingest circuits data",
               "description": "Ejecuta Ingest circuits data",
               "notebook_task": {
-                "notebook_path": "/proyecto_smartdata/Ingest racing data",
+                "notebook_path": "/proyecto_smartdata/Ingest_circuits_data",
                 "source": "WORKSPACE",
                 "base_parameters": {
                   "storage_name": "adlsmartdata2810",
@@ -166,7 +166,7 @@ jobs:
               "task_key": "Ingest racing data",
               "description": "Ejecuta Ingest racing data",
               "notebook_task": {
-                "notebook_path": "/proyecto_smartdata/Ingest racing data",
+                "notebook_path": "/proyecto_smartdata/Ingest_racing_data",
                 "source": "WORKSPACE",
                 "base_parameters": {
                   "storage_name": "adlsmartdata2810",
