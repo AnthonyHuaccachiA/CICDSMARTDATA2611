@@ -141,8 +141,8 @@ jobs:
               "max_retries": 2
             },
             {
-              "task_key": "Ingest circuits data",
-              "description": "Ejecuta Ingest circuits data",
+              "task_key": "Ingest_circuits_data",
+              "description": "Ejecuta Ingest_circuits_data",
               "notebook_task": {
                 "notebook_path": "/proyecto_smartdata/Ingest_circuits_data",
                 "source": "WORKSPACE",
@@ -163,8 +163,8 @@ jobs:
               ]
             },
             {
-              "task_key": "Ingest racing data",
-              "description": "Ejecuta Ingest racing data",
+              "task_key": "Ingest_racing_data",
+              "description": "Ejecuta Ingest_racing_data",
               "notebook_task": {
                 "notebook_path": "/proyecto_smartdata/Ingest_racing_data",
                 "source": "WORKSPACE",
@@ -180,7 +180,7 @@ jobs:
               "max_retries": 2,
               "depends_on": [
                 {
-                  "task_key": "Ingest circuits data"
+                  "task_key": "Ingest_circuits_data"
                 }
               ]
             },
@@ -201,7 +201,7 @@ jobs:
               "max_retries": 2,
               "depends_on": [
                 {
-                  "task_key": "Ingest racing data"
+                  "task_key": "Ingest_racing_data"
                 }
               ]
             },
